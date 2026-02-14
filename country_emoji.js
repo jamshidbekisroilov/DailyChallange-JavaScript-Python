@@ -1,0 +1,35 @@
+const countryEmojis = {
+    "AL": "🇦🇱", "AD": "🇦🇩", "AR": "🇦🇷", "AM": "🇦🇲", "AU": "🇦🇺",
+    "AT": "🇦🇹", "AZ": "🇦🇿", "BE": "🇧🇪", "BJ": "🇧🇯", "BO": "🇧🇴",
+    "BA": "🇧🇦", "BR": "🇧🇷", "BG": "🇧🇬", "CA": "🇨🇦", "CL": "🇨🇱",
+    "CN": "🇨🇳", "CO": "🇨🇴", "HR": "🇭🇷", "CY": "🇨🇾", "CZ": "🇨🇿",
+    "DK": "🇩🇰", "EC": "🇪🇨", "ER": "🇪🇷", "EE": "🇪🇪", "FI": "🇫🇮",
+    "FR": "🇫🇷", "GE": "🇬🇪", "DE": "🇩🇪", "GB": "🇬🇧", "GR": "🇬🇷",
+    "GW": "🇬🇼", "HT": "🇭🇹", "HK": "🇭🇰", "HU": "🇭🇺", "IS": "🇮🇸",
+    "IN": "🇮🇳", "IR": "🇮🇷", "IE": "🇮🇪", "IL": "🇮🇱", "IT": "🇮🇹",
+    "JM": "🇯🇲", "JP": "🇯🇵", "KZ": "🇰🇿", "KE": "🇰🇪", "XK": "🇽🇰",
+    "KG": "🇰🇬", "LV": "🇱🇻", "LB": "🇱🇧", "LI": "🇱🇮", "LT": "🇱🇹",
+    "LU": "🇱🇺", "MG": "🇲🇬", "MY": "🇲🇾", "MT": "🇲🇹", "MX": "🇲🇽",
+    "MD": "🇲🇩", "MC": "🇲🇨", "MN": "🇲🇳", "ME": "🇲🇪", "MA": "🇲🇦",
+    "NL": "🇳🇱", "NZ": "🇳🇿", "NG": "🇳🇬", "MK": "🇲🇰", "NO": "🇳🇴",
+    "PK": "🇵🇰", "PH": "🇵🇭", "PL": "🇵🇱", "PT": "🇵🇹", "PR": "🇵🇷",
+    "RO": "🇷🇴", "SM": "🇸🇲", "SA": "🇸🇦", "RS": "🇷🇸", "SG": "🇸🇬",
+    "SK": "🇸🇰", "SI": "🇸🇮", "ZA": "🇿🇦", "KR": "🇰🇷", "ES": "🇪🇸",
+    "SE": "🇸🇪", "CH": "🇨🇭", "TH": "🇹🇭", "TT": "🇹🇹", "TR": "🇹🇷",
+    "UA": "🇺🇦", "AE": "🇦🇪", "US": "🇺🇸", "UY": "🇺🇾", "UZ": "🇺🇿", "VE": "🇻🇪"
+};
+
+function getFlag(countryCode) {
+    // Kodni har doim katta harflarga o'tkazib tekshiramiz (masalan 'uz' bo'lsa ham ishlaydi)
+    const code = countryCode.toUpperCase();
+    return countryEmojis[code] || "🏳️"; // Agar kod topilmasa, bayroqcha qaytaradi
+}
+
+// Tekshirish:
+console.log(getFlag("AL")); // 🇦🇱
+console.log(getFlag("UZ")); // 🇺🇿
+console.log(getFlag("us")); // 🇺🇸
+
+
+
+
